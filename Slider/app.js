@@ -18,6 +18,14 @@ downBtn.addEventListener('click', () => {
     clickedBtn('down');
 })
 
+document.addEventListener('keydown', event => {
+    if (event.key === 'ArrowUp') {
+        clickedBtn('up');
+    } else if (event.key === 'ArrowDown') {
+        clickedBtn('down');
+    }
+})
+
 function clickedBtn (direction) {
     if (direction === 'up') {
         activeSliderIndex++
